@@ -58,9 +58,9 @@ Standard browser security measures (such as the padlock icon and TLS verificatio
 │                                                                             │
 │  ┌───────────────────────┐  ┌───────────────────────┐  ┌─────────────────┐  │
 │  │  Domain Intelligence  │  │   ML Text Classifier  │  │  Scoring Engine │  │
-│  │  - WHOIS longevity    │  │   - TF-IDF Vectorizer │  │  - Store Trust  │  │
-│  │  - SSL/TLS handshake  │  │   - Logistic Regr.    │  │    (40/20/20/20)│  │
-│  │  - Structural flags   │  │   - P(dark) probability│  │  - UI Safety    │  │
+│  │  - WHOIS longevity    │  │  - TF-IDF Vectorizer  │  │  - Store Trust  │  │
+│  │  - SSL/TLS handshake  │  │  - Logistic Regr.     │  │    (40/20/20/20)│  │
+│  │  - Structural flags   │  │  - P(dark)probability │  │  - UI Safety    │  │
 │  └───────────┬───────────┘  └───────────┬───────────┘  │    (100 - Risk) │  │
 │              │                          │              └────────┬────────┘  │
 │              └──────────────────────────┼───────────────────────┘           │
