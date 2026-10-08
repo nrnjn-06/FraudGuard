@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FraudGuard Test Page — Deceptive UI</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      margin: 0;
+      padding: 30px 20px;
+      line-height: 1.5;
+    }
+    .test-banner {
+      background: #e2e8f0;
+      color: #475569;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 25px;
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 24px;
+      max-width: 680px;
+      margin: 0 auto 20px auto;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    h1 {
+      font-size: 22px;
+      margin-top: 0;
+      color: #0f172a;
+    }
+    .price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin: 12px 0;
+    }
+    .current-price {
+      font-size: 26px;
+      font-weight: 800;
+      color: #0f172a;
+    }
+    .original-price {
+      font-size: 16px;
+      color: #94a3b8;
+      text-decoration: line-through;
+    }
+    .badge-urgency {
+      display: inline-block;
+      background: #fef2f2;
+      color: #b91c1c;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 13px;
+      margin: 6px 0;
+    }
+    .timer-box {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      color: #92400e;
+      font-weight: 700;
+      padding: 10px 14px;
+      border-radius: 6px;
+      margin: 14px 0;
+      font-size: 15px;
+    }
+    .scarcity-box {
+      color: #b45309;
+      font-weight: 600;
+      margin: 10px 0;
+    }
+    .social-proof {
+      color: #475569;
+      font-size: 14px;
+      margin: 8px 0;
+    }
+    .btn-buy {
+      background: #0f172a;
+      color: #ffffff;
+      border: none;
+      padding: 12px 24px;
+      font-size: 15px;
+      font-weight: 700;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 16px;
+      display: block;
+      width: 100%;
+    }
+    .btn-buy:hover {
+      background: #1e293b;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="test-banner">FraudGuard Test Page — Deceptive UI</div>
+
+  <div class="card">
+    <h1>SoundWave Wireless Headphones</h1>
+    
+    <div class="price-row">
+      <span class="current-price">₹1,999</span>
+      <span class="original-price">₹4,999</span>
+    </div>
+
+    <!-- Urgency Signals -->
+    <p class="badge-urgency">Flash sale! Limited time offer!</p>
+
+    <!-- Countdown Timer -->
+    <div class="timer-box">
+      Flash sale ends in: <span id="countdown">05:00</span>
+    </div>
+
+    <p style="font-weight: 600; color: #dc2626;">Hurry! Offer ends soon!</p>
+
+    <!-- Scarcity Signal -->
+    <p class="scarcity-box">Only 2 items left in stock!</p>
+
+    <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 16px 0;">
+
+    <!-- Social Proof Signals -->
+    <p class="social-proof">👥 24 people are viewing this product right now.</p>
+    <p class="social-proof">⭐ 18 people bought this today.</p>
+
+    <!-- Call to action -->
+    <button type="button" class="btn-buy">BUY NOW</button>
+  </div>
+
+  <!-- Countdown Script: Updates DOM text each second -->
+  <script>
+    (function() {
+      let remaining = 300; // 5 minutes
+      const el = document.getElementById('countdown');
+      function tick() {
+        const m = Math.floor(remaining / 60);
+        const s = remaining % 60;
+        if (el) {
+          el.textContent = `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+        }
+        if (remaining > 0) {
+          remaining--;
+        } else {
+          remaining = 300; // Reset loop for continuous evaluation
+        }
+      }
+      setInterval(tick, 1000);
+    })();
+  </script>
+</body>
+</html>
