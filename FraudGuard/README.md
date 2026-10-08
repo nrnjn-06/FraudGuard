@@ -6,11 +6,7 @@
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-1.4%2B-F7931E.svg)](https://scikit-learn.org/)
 [![Status](https://img.shields.io/badge/Status-Complete-success.svg)]()
 
-> **CBS 3002 — Information Security Course Project (L21+L22)**  
-> **Authors:**  
-> • Niranjan S (24BBS0023)  
-> • Saswat T R (24BBS0139)  
-> • Sandhya Tiwari (24BBS0186)  
+
 
 ---
 
