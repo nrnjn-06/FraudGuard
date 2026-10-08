@@ -455,16 +455,10 @@ The FastAPI backend exposes the following endpoints on `http://127.0.0.1:8001`:
 
 ---
 
-## 16. Course & Team Information
-
-This project was developed for **CBS 3002 — Information Security Course Project (L21+L22)**.
-
-* **Niranjan S** — `24BBS0023`
-* **Saswat T R** — `24BBS0139`
-* **Sandhya Tiwari** — `24BBS0186`
 
 ---
 
-## 17. License
+## 16
+. License
 
 This project is licensed under the [MIT License](LICENSE).
