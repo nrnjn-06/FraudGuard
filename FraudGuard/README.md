@@ -6,13 +6,6 @@
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-1.4%2B-F7931E.svg)](https://scikit-learn.org/)
 [![Status](https://img.shields.io/badge/Status-Complete-success.svg)]()
 
-> **CBS 3002 — Information Security Course Project (L21+L22)**  
-> **Authors:**  
-> • Niranjan S (24BBS0023)  
-> • Saswat T R (24BBS0139)  
-> • Sandhya Tiwari (24BBS0186)  
-
----
 
 ## 1. Problem Statement
 
@@ -461,20 +454,6 @@ The FastAPI backend exposes the following endpoints on `http://127.0.0.1:8001`:
 * **Broader Browser Compatibility**: Package manifest configurations for Firefox (WebExtensions) and Safari.
 * **Expanded Pattern Taxonomies**: Extend coverage to sneaking add-ons, forced continuity traps, and confirm-shaming dialogues.
 
----
-
-## 16. Course & Team Information
-
-This project was developed for **CBS 3002 — Information Security Course Project (L21+L22)**.
-
-* **Niranjan S** — `24BBS0023`
-* **Saswat T R** — `24BBS0139`
-* **Sandhya Tiwari** — `24BBS0186`
-
----
-
-## 17. Project & Copyright Notice
-
-Developed for **CBS 3002 — Information Security** at VIT.  
+## 16. Project & Copyright Notice
 © 2026 Niranjan S, Saswat T R, Sandhya Tiwari. All rights reserved.  
 This repository is published for academic demonstration and course evaluation.
