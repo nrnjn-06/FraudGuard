@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FraudGuard Test Page — Fraud Simulation</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      margin: 0;
+      padding: 30px 20px;
+      line-height: 1.5;
+    }
+    .test-banner {
+      background: #e2e8f0;
+      color: #475569;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 25px;
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 24px;
+      max-width: 680px;
+      margin: 0 auto 20px auto;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    .store-header {
+      text-align: center;
+      border-bottom: 2px dashed #dc2626;
+      padding-bottom: 14px;
+      margin-bottom: 18px;
+    }
+    .store-title {
+      font-size: 24px;
+      font-weight: 900;
+      color: #dc2626;
+      margin: 0;
+      letter-spacing: 0.03em;
+    }
+    .clearance-badge {
+      display: inline-block;
+      background: #dc2626;
+      color: #ffffff;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 4px;
+      font-size: 13px;
+      margin-top: 8px;
+      letter-spacing: 0.05em;
+    }
+    h2 {
+      font-size: 20px;
+      margin: 12px 0 6px 0;
+      color: #0f172a;
+    }
+    .price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin: 12px 0;
+    }
+    .current-price {
+      font-size: 28px;
+      font-weight: 900;
+      color: #dc2626;
+    }
+    .original-price {
+      font-size: 16px;
+      color: #94a3b8;
+      text-decoration: line-through;
+    }
+    .discount-tag {
+      background: #fee2e2;
+      color: #991b1b;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+    .timer-box {
+      background: #fef2f2;
+      border: 1.5px solid #fca5a5;
+      color: #991b1b;
+      font-weight: 800;
+      padding: 12px 16px;
+      border-radius: 6px;
+      margin: 14px 0;
+      font-size: 16px;
+      text-align: center;
+    }
+    .urgency-list p {
+      margin: 6px 0;
+      font-weight: 600;
+      color: #b91c1c;
+    }
+    .scarcity-list p {
+      margin: 6px 0;
+      font-weight: 700;
+      color: #c2410c;
+    }
+    .social-list p {
+      margin: 6px 0;
+      font-size: 13.5px;
+      color: #475569;
+    }
+    .warning-banner {
+      background: #fffbeb;
+      border-left: 4px solid #f59e0b;
+      padding: 10px 14px;
+      margin: 14px 0;
+      font-size: 13.5px;
+      color: #92400e;
+      font-weight: 600;
+    }
+    .checkout-section {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 18px;
+      margin-top: 20px;
+    }
+    .checkout-title {
+      font-size: 16px;
+      font-weight: 700;
+      margin: 0 0 12px 0;
+      color: #0f172a;
+    }
+    .option-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #1e293b;
+      cursor: pointer;
+    }
+    .option-label input[type="checkbox"] {
+      margin-top: 3px;
+      width: 16px;
+      height: 16px;
+    }
+    .option-note {
+      font-size: 12.5px;
+      color: #64748b;
+      margin: 4px 0 0 26px;
+    }
+    .btn-buy {
+      background: #dc2626;
+      color: #ffffff;
+      border: none;
+      padding: 14px 24px;
+      font-size: 16px;
+      font-weight: 800;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 16px;
+      display: block;
+      width: 100%;
+      letter-spacing: 0.04em;
+    }
+    .btn-buy:hover {
+      background: #b91c1c;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="test-banner">FraudGuard Test Page — Fraud Simulation</div>
+
+  <div class="card">
+    <div class="store-header">
+      <h1 class="store-title">⚡ SUPER DEAL MART ⚡</h1>
+      <div><span class="clearance-badge">🔥 FINAL CLEARANCE SALE — 90% OFF EVERYTHING 🔥</span></div>
+      <p style="margin: 8px 0 0 0; font-weight: 700; color: #b91c1c;">Last chance! Only today!</p>
+    </div>
+
+    <!-- Countdown Timer -->
+    <div class="timer-box">
+      ⏰ FINAL OFFER ENDS IN: <span id="countdown">04:37</span>
+    </div>
+
+    <h2>Ultra Smart Watch Pro with Cellular Connectivity</h2>
+
+    <div class="price-row">
+      <span class="current-price">₹999</span>
+      <span class="original-price">₹9,999</span>
+      <span class="discount-tag">90% OFF</span>
+    </div>
+
+    <!-- Urgency Signals -->
+    <div class="urgency-list">
+      <p>🔥 Buy now before it's too late!</p>
+      <p>⚠️ Time is running out!</p>
+    </div>
+
+    <!-- Scarcity Signals -->
+    <div class="scarcity-list">
+      <p>⚠ Only 1 item left in stock!</p>
+      <p>📦 Selling fast — almost gone!</p>
+      <p>⚡ Limited stock available!</p>
+    </div>
+
+    <!-- Warning / Artificial Pressure Text -->
+    <div class="warning-banner">
+      <p style="margin: 0 0 4px 0;">Your discount will disappear when the timer reaches zero.</p>
+      <p style="margin: 0;">Complete your purchase before the timer expires!</p>
+    </div>
+
+    <!-- Social Proof Signals -->
+    <div class="social-list">
+      <p>👥 37 people are viewing this item right now.</p>
+      <p>🔥 21 people bought this today!</p>
+      <p>⭐ High demand item — trending now!</p>
+      <p>📈 Thousands of customers bought this today!</p>
+    </div>
+
+    <!-- Checkout section with pre-selected recurring payment -->
+    <div class="checkout-section">
+      <div class="checkout-title">Special Protection Plan</div>
+      
+      <div>
+        <label class="option-label">
+          <input type="checkbox" checked id="protection-addon">
+          <span>Add Premium Protection — ₹499/month recurring payment</span>
+        </label>
+        <p class="option-note">Automatically renews every month. Payment is charged on a recurring monthly basis.</p>
+      </div>
+
+      <button type="button" class="btn-buy">PAY NOW</button>
+    </div>
+  </div>
+
+  <!-- Countdown Script: Updates DOM text each second -->
+  <script>
+    (function() {
+      let remaining = 277; // 04:37
+      const el = document.getElementById('countdown');
+      function tick() {
+        const m = Math.floor(remaining / 60);
+        const s = remaining % 60;
+        if (el) {
+          el.textContent = `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+        }
+        if (remaining > 0) {
+          remaining--;
+        } else {
+          remaining = 277; // Reset loop for continuous evaluation
+        }
+      }
+      setInterval(tick, 1000);
+    })();
+  </script>
+</body>
+</html>

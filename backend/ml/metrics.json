@@ -1,0 +1,110 @@
+{
+  "train_samples": 1884,
+  "test_samples": 472,
+  "accuracy": 0.9301,
+  "precision": 0.9677,
+  "recall": 0.8898,
+  "f1_score": 0.9272,
+  "roc_auc": 0.9727,
+  "confusion_matrix": {
+    "true_negative": 229,
+    "false_positive": 7,
+    "false_negative": 26,
+    "true_positive": 210
+  },
+  "classification_report": {
+    "0": {
+      "precision": 0.8980392156862745,
+      "recall": 0.9703389830508474,
+      "f1-score": 0.9327902240325866,
+      "support": 236.0
+    },
+    "1": {
+      "precision": 0.967741935483871,
+      "recall": 0.8898305084745762,
+      "f1-score": 0.9271523178807947,
+      "support": 236.0
+    },
+    "accuracy": 0.9300847457627118,
+    "macro avg": {
+      "precision": 0.9328905755850727,
+      "recall": 0.9300847457627118,
+      "f1-score": 0.9299712709566906,
+      "support": 472.0
+    },
+    "weighted avg": {
+      "precision": 0.9328905755850728,
+      "recall": 0.9300847457627118,
+      "f1-score": 0.9299712709566905,
+      "support": 472.0
+    }
+  },
+  "hyperparameters": {
+    "model": "LogisticRegression",
+    "C": 1.0,
+    "max_iter": 1000,
+    "solver": "lbfgs",
+    "vectorizer": "TfidfVectorizer",
+    "max_features": 5000,
+    "ngram_range": [
+      1,
+      2
+    ],
+    "sublinear_tf": true,
+    "stop_words": "english",
+    "random_state": 42
+  },
+  "test_sentence_results": [
+    {
+      "text": "Hurry! Only 2 items left in stock!",
+      "expected": "DARK_PATTERN",
+      "predicted": "DARK_PATTERN",
+      "confidence": 0.9865,
+      "dark_pattern_prob": 0.9865,
+      "correct": true
+    },
+    {
+      "text": "Free shipping on orders over $50",
+      "expected": "NOT_DARK_PATTERN",
+      "predicted": "NOT_DARK_PATTERN",
+      "confidence": 0.5405,
+      "dark_pattern_prob": 0.4595,
+      "correct": true
+    },
+    {
+      "text": "Someone just bought this item 5 minutes ago",
+      "expected": "DARK_PATTERN",
+      "predicted": "DARK_PATTERN",
+      "confidence": 0.9758,
+      "dark_pattern_prob": 0.9758,
+      "correct": true
+    },
+    {
+      "text": "Contact us at support@example.com",
+      "expected": "NOT_DARK_PATTERN",
+      "predicted": "NOT_DARK_PATTERN",
+      "confidence": 0.7219,
+      "dark_pattern_prob": 0.2781,
+      "correct": true
+    }
+  ],
+  "dataset_stats": {
+    "initial_rows": 2356,
+    "cleaned_rows": 2356,
+    "dropped_rows": 0,
+    "label_counts": {
+      "1": 1178,
+      "0": 1178
+    },
+    "category_counts": {
+      "Not Dark Pattern": 1178,
+      "Scarcity": 418,
+      "Social Proof": 312,
+      "Urgency": 210,
+      "Misdirection": 195,
+      "Obstruction": 27,
+      "Sneaking": 12,
+      "Forced Action": 4
+    }
+  }
+}
